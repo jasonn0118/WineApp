@@ -1,30 +1,51 @@
-import { Grid } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
-import * as WineService from '../service/WinesService';
+import {
+  Grid,
+  List,
+  ListItem,
+  ListItemText,
+  makeStyles,
+} from '@material-ui/core';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { fetchRegionsAPI } from '../redux/action/regionActions';
+
+const useStyles = makeStyles((theme) => ({
+  listItem: {
+    textAlign: "center"
+  },
+}));
 
 function Regions() {
-  const [regions, setRegions] = useState([]);
-  useEffect(() => {
-    WineService.fetchRegions().then((regions) => {
-      setRegions(regions);
-    });
-  }, []);
+  const classes = useStyles();
+  const { regions, loading } = useSelector((state) => ({
+    regions: state.regions.regions,
+    loading: state.regions.loading,
+  }));
+  const dispatch = useDispatch();
 
-  const handleSelectedRegion = (e, region) => {
-    e.preventDefault();
-    console.log(region, '>>>>>>>>REGION')
-  }
+  useEffect(() => {
+    dispatch(fetchRegionsAPI());
+  }, [dispatch]);
 
   return (
     <Grid container spacing={1}>
       <Grid item xs={12}>
-        {regions &&
-          regions.map((region) => (
-            <Grid item xs={12}>
-              <a key={region} onClick={e => handleSelectedRegion(e, region)}>{region}</a>
-            </Grid>
-          ))}
+        <h1>Regions</h1>
       </Grid>
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <Grid item xs={12}>
+          <List component='nav'>
+            {regions.map((region, index) => (
+                <ListItem key={region} className={classes.listItem} button component={Link} to={`/regions/${region}`}>
+                  <ListItemText primary={region} />
+                </ListItem>
+            ))}
+          </List>
+        </Grid>
+      )}
     </Grid>
   );
 }

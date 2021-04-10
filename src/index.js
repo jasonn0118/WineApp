@@ -1,22 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import thunk from 'redux-thunk';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
+import history from './history';
 import { Provider } from 'react-redux';
-import { applyMiddleware, combineReducers } from 'redux';
-
-const rootReducer = combineReducers({
-  wine: wineReducer
-})
-
-const store = createStore(rootReducer, applyMiddleware(thunk));
+import store from './redux/appStore';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
+    <Router history={history}>
       <App />
     </Router>
   </Provider>,

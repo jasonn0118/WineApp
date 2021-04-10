@@ -12,5 +12,11 @@ export function fetchWinesFrom(region) {
     console.log(`GET ${requestUrl}`);
 
     return fetch(requestUrl).then(res => res.json());
+}
 
+export function fetchSelectedWine(wine) {
+    const requestUrl = `${baseUrl}/api/wines/${wine}`;
+    console.log(`GET ${requestUrl}`);
+
+    return fetch(requestUrl).then(res=> res.json());
 }

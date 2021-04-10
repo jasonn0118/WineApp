@@ -1,8 +1,9 @@
+import { Route, Switch, useHistory } from 'react-router';
 import { Button, Grid, makeStyles } from '@material-ui/core';
-import { Route, Switch } from 'react-router';
 import './App.css';
-import RegionsPage from './page/RegionsPage';
-import WineListPage from './page/WineListPage';
+import Wines from './component/Wines';
+import Regions from './component/Regions';
+import Wine from './component/Wine';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +18,14 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
+  let history = useHistory();
 
+  const goBack = event => {
+    history.back();
+  }
+  const goHome = event => {
+    history.push("/");
+  }
   return (
     <div className={classes.root}>
       <Grid container justify="center" spacing={1}>
@@ -26,18 +34,25 @@ function App() {
         </Grid>
         <Grid item xs={12}>
           <div className={classes.button}>
-            <Button variant='contained' color='primary'>
+            <Button variant='contained' color='primary' onClick={goBack}>
               Back
             </Button>
-            <Button variant='contained' color='primary'>
+            <Button variant='contained' color='primary' onClick={goHome}>
               Home
             </Button>
           </div>
         </Grid>
         <Grid item >
           <Switch>
-            <Route exact path="/" component={RegionsPage} />
-            <Route exact path="/regions" component={WineListPage} />
+            <Route path="/regions/:regionId/wines/:WineId">
+              <Wine />
+            </Route>
+            <Route path="/regions/:regionId">
+              <Wines />
+            </Route>
+            <Route path="/">
+              <Regions />
+            </Route>
           </Switch>
         </Grid>
       </Grid>
