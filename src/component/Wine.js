@@ -14,8 +14,15 @@ import { fetchCurrentWineAPI } from '../redux/action/wineActions';
 import { baseUrl } from '../service/WinesService';
 
 const useStyles = makeStyles({
+  root: {
+    display: 'flex'
+  },
+  content: {
+    maxWidth: 450
+  },
   media: {
-    width: '100%',
+      width: "100%",
+    maxWidth: 200,
     height: 350,
     backgroundSize: 'auto',
   },
@@ -34,8 +41,8 @@ function Wine() {
     dispatch(fetchCurrentWineAPI(WineId));
   }, [dispatch]);
 
-  if(!wine.appellation) {
-      return null;
+  if (!wine.appellation) {
+    return null;
   }
   return (
     <Grid container spacing={1}>
@@ -46,15 +53,15 @@ function Wine() {
         <div>loading...</div>
       ) : (
         <Grid item xs={12}>
-          <Card>
-            <CardActionArea>
+          <Card >
+            <CardActionArea className={classes.root}>
               <CardMedia
                 className={classes.media}
                 image={`${baseUrl}/api/wines/${WineId}/image`}
                 title={WineId}
               />
-              <CardContent>
-                <Typography gutterBottom variant='h5' component='h2'>
+              <CardContent className={classes.content}>
+                <Typography gutterBottom variant='h3' component='h1'>
                   {WineId}
                 </Typography>
                 <Typography variant='body1' component='p'>

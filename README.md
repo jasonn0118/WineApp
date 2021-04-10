@@ -1,71 +1,118 @@
-# Getting Started with Create React App
+# Jason Shin's portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my portfolio website.
 
-## Available Scripts
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Instagram][instagram-shield]][instagram-url]
 
-In the project directory, you can run:
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/jasonn0118/WineApp">
+    <img src="public/Jason_logo.svg" alt="Logo" width="80" height="80">
+  </a>
 
-### `yarn start`
+  <h3 align="center">Wine App</h3>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <p align="center">
+    This is a React web application
+    <br />
+    <a href="https://github.com/jasonn0118/WineApp"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://jeaminshin.com">View Live</a>
+    ·
+    <a href="https://github.com/jasonn0118/WineApp/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/jasonn0118/WineApp/issues">Request Feature</a>
+  </p>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 
-### `yarn test`
+<!-- ABOUT THE PROJECT -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## About the project
 
-### `yarn build`
+<!-- ScreenShot in here -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In this project, I mostly focus on refactoring the old version React and Redux.
+Since I learned React, it has been many updates. So I decided to refactor the original using up-to-date React technology.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here's why(in Detail):
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React features, especially Hooks, have been updated.
+- React recommends to use functional component.
+- React Router has been updated.
+- Using Redux with recent React Hooks(`useSelector`) is way easier.
 
-### `yarn eject`
+Here is the link for original project - [Wine App Tutorial](https://github.com/react-bootcamp/react-103)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Built With
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [WineOpenAPI](https://wines-api.herokuapp.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Clone the repo
+  ```sh
+  git clone https://github.com/your_username_/Project-Name.git
+  ```
+2. Install NPM Packages
 
-## Learn More
+```sh
+   npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Start the server
+```sh
+  npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- CONTACT -->
 
-### Code Splitting
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Jason Shin - [LinkedIn][linkedin-url] - tlswoals2006@gmail.com
 
-### Analyzing the Bundle Size
+Address: Vancouver, BC, 🇨🇦
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Project Link: [https://github.com/jasonn0118/WineApp.git](https://github.com/jasonn0118/WineApp.git)
 
-### Making a Progressive Web App
+<!-- ACKNOWLEDGEMENTS -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgements
 
-### Advanced Configuration
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Img Shields](https://shields.io)
+- [GitHub Pages](https://pages.github.com)
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [WineOpenAPI](https://wines-api.herokuapp.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# WineApp
+[stars-shield]: https://img.shields.io/github/stars/jasonn0118/WineApp.svg?style=for-the-badge
+[stars-url]: https://github.com/jasonn0118/WineApp/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jasonn0118/WineApp.svg?style=for-the-badge
+[issues-url]: https://github.com/jasonn0118/portfolio/issues
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/jasonshin0118/
+[instagram-shield]: https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white
+[instagram-url]: https://www.instagram.com/jasonn_dev/
+[gmail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white

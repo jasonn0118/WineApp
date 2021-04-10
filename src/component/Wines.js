@@ -1,4 +1,10 @@
-import { Grid, List, ListItem, ListItemText, makeStyles } from '@material-ui/core';
+import {
+  Grid,
+  List,
+  ListItem,
+  ListItemText,
+  makeStyles,
+} from '@material-ui/core';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
@@ -6,23 +12,29 @@ import { Link } from 'react-router-dom';
 import { fetchWinesAPI } from '../redux/action/wineActions';
 
 const useStyles = makeStyles({
-   listItem: {
-     textAlign: 'center'
-   }
-})
+  listItem: {
+    textAlign: 'center',
+    border: "0.5px solid lightgray"
+  },
+});
 
 function Wines() {
   const classes = useStyles();
   const dispatch = useDispatch();
   const { regionId } = useParams();
-  const { wines, loading } = useSelector((state) => ({
+  const { wines, loading, error } = useSelector((state) => ({
     wines: state.wines.wines,
     loading: state.wines.loading,
+    error: state.wines.error
   }));
 
   useEffect(() => {
     dispatch(fetchWinesAPI(regionId));
   }, [dispatch]);
+
+  if(error){
+    return <div>{error}</div>
+  }
 
   return (
     <Grid container spacing={1}>
@@ -34,17 +46,21 @@ function Wines() {
       ) : (
         <Grid item xs={12}>
           <List component='nav'>
-            {wines.map((wine, index) => (
-              <ListItem
-              key={wine.id}
-              className={classes.listItem}
-                button
-                component={Link}
-                to={`/regions/${regionId}/wines/${wine.id}`}
-              >
-                <ListItemText primary={wine.id} />
-              </ListItem>
-            ))}
+            {wines.length === 0 ? (
+              <div>Nothing to display...</div>
+            ) : (
+              wines.map((wine, index) => (
+                <ListItem
+                  key={wine.id}
+                  className={classes.listItem}
+                  button
+                  component={Link}
+                  to={`/regions/${regionId}/wines/${wine.id}`}
+                >
+                  <ListItemText primary={wine.id} />
+                </ListItem>
+              ))
+            )}
           </List>
         </Grid>
       )}

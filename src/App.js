@@ -20,10 +20,10 @@ function App() {
   const classes = useStyles();
   let history = useHistory();
 
-  const goBack = event => {
-    history.back();
+  const goBack = () => {
+    history.goBack();
   }
-  const goHome = event => {
+  const goHome = () => {
     history.push("/");
   }
   return (

@@ -12,7 +12,8 @@ import { fetchRegionsAPI } from '../redux/action/regionActions';
 
 const useStyles = makeStyles((theme) => ({
   listItem: {
-    textAlign: "center"
+    textAlign: "center",
+    border: "0.5px solid lightgray"
   },
 }));
 
