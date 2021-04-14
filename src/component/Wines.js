@@ -42,7 +42,7 @@ function Wines() {
         <h1>Wines</h1>
       </Grid>
       {loading ? (
-        <div>loading...</div>
+        <div>Loading...</div>
       ) : (
         <Grid item xs={12}>
           <List component='nav'>

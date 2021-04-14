@@ -1,6 +1,4 @@
-# Jason Shin's portfolio
-
-This is my portfolio website.
+# WineApp
 
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -17,12 +15,12 @@ This is my portfolio website.
   <h3 align="center">Wine App</h3>
 
   <p align="center">
-    This is a React web application
+    This is a React web wine application
     <br />
     <a href="https://github.com/jasonn0118/WineApp"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://jeaminshin.com">View Live</a>
+    <a href="https://distracted-lichterman-ed1426.netlify.app">View Live</a>
     ·
     <a href="https://github.com/jasonn0118/WineApp/issues">Report Bug</a>
     ·
@@ -38,6 +36,7 @@ This is my portfolio website.
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#installation">Installation</li>
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
@@ -86,8 +85,8 @@ Here is the link for original project - [Wine App Tutorial](https://github.com/r
   npm start
 ```
 
-<!-- CONTACT -->
 
+<!-- CONTACT -->
 ## Contact
 
 Jason Shin - [LinkedIn][linkedin-url] - tlswoals2006@gmail.com
@@ -95,6 +94,7 @@ Jason Shin - [LinkedIn][linkedin-url] - tlswoals2006@gmail.com
 Address: Vancouver, BC, 🇨🇦
 
 Project Link: [https://github.com/jasonn0118/WineApp.git](https://github.com/jasonn0118/WineApp.git)
+
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -106,6 +106,7 @@ Project Link: [https://github.com/jasonn0118/WineApp.git](https://github.com/jas
 - [React](https://reactjs.org/)
 - [Redux](https://redux.js.org/)
 - [WineOpenAPI](https://wines-api.herokuapp.com/)
+- [MaterialUI](https://material-ui.com/)
 
 [stars-shield]: https://img.shields.io/github/stars/jasonn0118/WineApp.svg?style=for-the-badge
 [stars-url]: https://github.com/jasonn0118/WineApp/stargazers

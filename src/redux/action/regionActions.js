@@ -17,7 +17,7 @@ export const fetchRegionFailure = (error) => ({
 
 export const fetchRegionsAPI = () => {
   return (dispatch) => {
-    dispatch(fetchRegionRequest);
+    dispatch(fetchRegionRequest());
     fetchRegions().then(
       (data) => {
         dispatch(fetchRegionSuccess(data));

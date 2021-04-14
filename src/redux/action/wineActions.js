@@ -31,7 +31,7 @@ export const fetchCurrentWineFailure = (error) => ({
 
 export const fetchWinesAPI = (region) => {
   return (dispatch) => {
-    dispatch(fetchWineRequest);
+    dispatch(fetchWineRequest());
     fetchWinesFrom(region).then(
       (data) => {
         dispatch(fetchWineSuccess(data));
@@ -48,7 +48,7 @@ export const fetchWinesAPI = (region) => {
 
 export const fetchCurrentWineAPI = (wine) => {
   return (dispatch) => {
-    dispatch(fetchCurrentWineRequest);
+    dispatch(fetchCurrentWineRequest());
     fetchSelectedWine(wine).then(
       (data) => {
         dispatch(fetchCurrentWineSuccess(data));

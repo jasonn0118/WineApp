@@ -50,7 +50,7 @@ function Wine() {
         <h1>Wine Details</h1>
       </Grid>
       {loading ? (
-        <div>loading...</div>
+        <div>Loading...</div>
       ) : (
         <Grid item xs={12}>
           <Card >
