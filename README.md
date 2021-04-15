@@ -49,6 +49,7 @@
 ## About the project
 
 <!-- ScreenShot in here -->
+[![WineApp Screen Shot][product-screenshot]](https://distracted-lichterman-ed1426.netlify.app/)
 
 In this project, I mostly focus on refactoring the old version React and Redux.
 Since I learned React, it has been many updates. So I decided to refactor the original using up-to-date React technology.
@@ -60,7 +61,7 @@ Here's why(in Detail):
 - React Router has been updated.
 - Using Redux with recent React Hooks(`useSelector`) is way easier.
 
-Here is the link for original project - [Wine App Tutorial](https://github.com/react-bootcamp/react-103)
+Here is the link for original project repo - [Wine App Tutorial](https://github.com/react-bootcamp/react-103)
 
 ### Built With
 
@@ -107,6 +108,8 @@ Project Link: [https://github.com/jasonn0118/WineApp.git](https://github.com/jas
 - [Redux](https://redux.js.org/)
 - [WineOpenAPI](https://wines-api.herokuapp.com/)
 - [MaterialUI](https://material-ui.com/)
+- [Netlify](https://www.netlify.com/)
+
 
 [stars-shield]: https://img.shields.io/github/stars/jasonn0118/WineApp.svg?style=for-the-badge
 [stars-url]: https://github.com/jasonn0118/WineApp/stargazers
@@ -117,3 +120,4 @@ Project Link: [https://github.com/jasonn0118/WineApp.git](https://github.com/jas
 [instagram-shield]: https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white
 [instagram-url]: https://www.instagram.com/jasonn_dev/
 [gmail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+[product-screenshot]: public/overview.png
