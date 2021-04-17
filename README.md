@@ -50,6 +50,7 @@
 
 <!-- ScreenShot in here -->
 [![WineApp Screen Shot][product-screenshot]](https://distracted-lichterman-ed1426.netlify.app/)
+by clicking screenshot, you can check out a demo.
 
 In this project, I mostly focus on refactoring the old version React and Redux.
 Since I learned React, it has been many updates. So I decided to refactor the original using up-to-date React technology.
